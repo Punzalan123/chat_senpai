@@ -94,9 +94,9 @@ const handleSubmit = async (e) => {
     typeText(msd, parsedData);
   }else{
     const err = await response.text();
-
+    console.log(err);
     msd.innerHTML = "Something went wrong"
-    alert(err) ;
+    // alert(err) ;
   }
 
 }
