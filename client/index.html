@@ -4,16 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/02c032f7e0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Chai - The AI Master</title>
+    <title>Chai - The AI Chatbot</title>
   </head>
   <body>
     <div id="app">
+      <div class="top">
+        <div class="topDiv">
+          <h2>Chai - Your AI Chatbot</h2>
+          <img src="assets/chai_logo.png" alt="aasda">
+        </div>
+      </div>
       <div id="chat_container"></div>
 
       <form>
-        <textarea name="prompt" placeholder="Ask Chai..." cols="1" rows="1"></textarea>
-        <button type="submit"><img src="assets/send.svg" ></button>
+        <textarea id="textmsg" name="prompt" placeholder="Ask Chai..." cols="1" rows="1"></textarea>
+        <button type="submit"><i class="fa-sharp fa-solid fa-paper-plane fa-xl" style="color: #ffffff;"></i></button>
       </form>
     </div>
     <script type="module" src="script.js"></script>

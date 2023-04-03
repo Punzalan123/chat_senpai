@@ -8,13 +8,14 @@
 }
 
 body {
-  background: #343541;
+  background: #141e30;
 }
 
 #app {
   width: 100vw;
   height: 100vh;
-  background: #343541;
+  background: #141e30;
+  /* background: linear-gradient(to right, #000428, #004e92); */
 
   display: flex;
   flex-direction: column;
@@ -50,12 +51,12 @@ body {
 }
 
 .ai {
-  background: #40414F;
+  background: #243b55;
 }
 
 .chat {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1080px;
   margin: 0 auto;
 
   display: flex;
@@ -88,21 +89,15 @@ body {
 
 .message {
   flex: 1;
-
   color: #dcdcdc;
   font-size: 20px;
-
   max-width: 100%;
   overflow-x: scroll;
-
-  /*
-   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
-   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
-   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
-   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
-  */
+  min-height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   white-space: pre-wrap; 
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -114,27 +109,44 @@ body {
 
 form {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 10px;
-  background: #40414F;
-
+  background: #243b55;
   display: flex;
   flex-direction: row;
   gap: 10px;
+  box-shadow: 0px -30px 60px 2px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 0px -30px 60px 2px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px -30px 60px 2px rgba(0,0,0,0.4);
 }
 
 textarea {
   width: 100%;
-
-  color: #fff;
-  font-size: 18px;
-
   padding: 10px;
+  font-size: 18px;
+  color: #fff;
   background: transparent;
   border-radius: 5px;
   border: none;
   outline: none;
+  resize: none;
+  min-height: 36px;
+  overflow-y: auto;
+  height: auto;
+  max-height: 200px;
+}
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #141e30;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: whitesmoke;
+  border-radius: 5px;
 }
 
 button {
@@ -147,4 +159,47 @@ button {
 form img {
   width: 30px;
   height: 30px;
+}
+
+form button{
+  width: 50px;
+  transition: 0.3s ease;
+}
+form button:hover i{
+  transform: scale(1.2);
+  transition: 0.3s ease;
+}
+
+
+.top{
+  width: 100%;
+  background: #000428;
+  height: 65px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.topDiv{
+  width: 100%;
+  max-width: 1080px;
+  height: 90%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  /* position: relative; */
+  align-items: center;
+}
+.topDiv h2 {
+  color: #fff;
+  margin-left: 10px;
+}
+.topDiv img {
+  color: #fff;
+  width: 40px;
+  margin-right: 10px;
 }

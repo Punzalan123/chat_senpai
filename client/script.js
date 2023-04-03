@@ -102,11 +102,18 @@ const handleSubmit = async (e) => {
 }
 
 form.addEventListener('submit', handleSubmit);
-form.addEventListener('keyup', (e) => {
-  if(e.keyCode === 13){
+form.addEventListener('keydown', (e) => {
+  if(e.keyCode === 13 && !e.shiftKey){
+    e.preventDefault();
     handleSubmit(e);
   }
 })
 
 
+const textarea = document.querySelector('#textmsg');
+textarea.addEventListener('input', autoResize);
 
+function autoResize() {
+  this.style.height = 'auto';
+  this.style.height = `${Math.min(this.scrollHeight, 200)}px`;
+}
